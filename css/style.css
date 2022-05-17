@@ -13,7 +13,7 @@ body {
   background-color: #537895;
   background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
   color: #e5e5e5;
-  font-family: 'Genos', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 36px;
 }
 
@@ -88,7 +88,7 @@ body {
 .game-info {
   position: absolute;
   top: 365px;
-  font-size: 23px;
+  font-size: 22px;
 }
 
 .game-restart {
@@ -97,11 +97,11 @@ body {
   border-radius: 15px;
   height: 30px;
   width: 90px;
-  font-family: 'Genos', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   color: #2a2a2a;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -129,13 +129,13 @@ body {
   transition: opacity .3s;
 }
 
-.round,
+.circle,
 .cross {
   opacity: 100%;
   cursor: default;
 }
 
-.round {
+.circle {
   background-color: transparent;
   border-radius: 50%;
   border: 20px solid #e5e5e5;
@@ -169,12 +169,12 @@ body {
   }
   .game-name {
     margin-bottom: 254px;
-    font-size: 70px;
+    font-size: 63px;
   }
   .game-name::before {
     font-size: 20px;
     text-align: left;
-    top: 70px;
+    top: 80px;
     left: 0;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -182,16 +182,17 @@ body {
   .game-info {
     position: relative;
     top: 0;
-    font-size: 48px;
+    font-size: 45px;
     margin: 20px 0;
   }
   .game-restart {
+    margin-top: 20px;
     position: relative;
     top: 0;
     border-radius: 25px;
     height: 50px;
-    width: 150px;
-    font-size: 24px;
+    width: 200px;
+    font-size: 20px;
   }
   .game-area {
     margin-left: 100px;
@@ -202,7 +203,7 @@ body {
     height: 150px;
     width: 150px;
   }
-  .round {
+  .circle {
     border-radius: 50%;
     border: 40px solid #e5e5e5;
   }

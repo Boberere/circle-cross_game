@@ -12,11 +12,11 @@
 		}
 		&-name {
             margin-bottom: 254px;
-			font-size: 70px;
+			font-size: 63px;
 			&::before {
 				font-size: 20px;
 				text-align: left;
-                top: 70px;
+                top: 80px;
 				left: 0;
 				transform: translateX(0);
 			}
@@ -24,16 +24,17 @@
 		&-info {
             position: relative;
             top: 0;
-			font-size: 48px;
+			font-size: 45px;
 			margin: 20px 0;
 		}
 		&-restart {
+			margin-top: 20px;
             position: relative;
             top: 0;
             border-radius: 25px;
             height: 50px;
-            width: 150px;
-            font-size: 24px;
+            width: 200px;
+            font-size: 20px;
 		}
 	}
     .game-area {
@@ -45,7 +46,7 @@
         height: 150px;
         width: 150px;
 	}
-	.round {
+	.circle {
         border-radius: 50%;
 		border: 40px solid $white;
 	}

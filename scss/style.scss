@@ -12,7 +12,7 @@ body {
 	background-color: $app-background-color;
 	background-image: $app-background-gradient;
 	color: $white;
-	font-family: 'Genos', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 36px;
 }
 .wrapper {
@@ -55,7 +55,7 @@ body {
 	&-info {
 		position: absolute;
 		top: 365px;
-		font-size: 23px;
+		font-size: 22px;
 	}
 	&-restart {
 		position: absolute;
@@ -63,11 +63,11 @@ body {
 		border-radius: 15px;
 		height: 30px;
 		width: 90px;
-		font-family: 'Genos', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
 		text-transform: uppercase;
 		color: rgb(42, 42, 42);
-		font-weight: bold;
+		font-weight: 600;
 		cursor: pointer;
 	}
 }
@@ -90,12 +90,12 @@ body {
 	cursor: pointer;
 	transition: opacity .3s;
 }
-.round,
+.circle,
 .cross {
 	opacity: 100%;
 	cursor: default;
 }
-.round {
+.circle {
 	background-color: transparent;
 	border-radius: 50%;
 	border: 20px solid $white;
