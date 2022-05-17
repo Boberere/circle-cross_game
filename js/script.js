@@ -117,4 +117,4 @@ const resultInfo = () => {
 		gameInfo.textContent = 'Draw!'
 	}
 }
-setInterval(resultInfo, 500)
+setInterval(resultInfo, 100)
