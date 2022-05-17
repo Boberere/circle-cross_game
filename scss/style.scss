@@ -21,7 +21,7 @@ body {
     flex-direction: column;
 }
 .game-name {
-    margin: 100px 0 40px;
+    margin: 40px 0 40px;
 }
 .game-area {
 	display: grid;
@@ -30,8 +30,8 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 10px;
-	height: 600px;
-	width: 600px;
+	height: 500px;
+	width: 500px;
 	background-color: $white;
 	border-radius: 30px;
 }
@@ -47,7 +47,7 @@ body {
 .round {
 	background-color: transparent;
 	border-radius: 50%;
-	border: 50px solid $app-background-color;;
+	border: 40px solid $app-background-color;;
 }
 .cross {
 	background-color: $app-background-color;;
