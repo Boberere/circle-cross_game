@@ -1,0 +1,52 @@
+@media (min-width: 1200px) {
+    .wrapper {
+        height: 100%;
+    }
+	.game {
+        padding: 50px;
+		flex-direction: row;
+		justify-content: space-between;
+		&-menu {
+			height: 500px;
+			align-items: flex-start;
+		}
+		&-name {
+            margin-bottom: 254px;
+			font-size: 70px;
+			&::before {
+				font-size: 20px;
+				text-align: left;
+                top: 70px;
+				left: 0;
+				transform: translateX(0);
+			}
+		}
+		&-info {
+            position: relative;
+            top: 0;
+			font-size: 48px;
+			margin: 20px 0;
+		}
+		&-restart {
+            position: relative;
+            top: 0;
+            border-radius: 25px;
+            height: 50px;
+            width: 150px;
+            font-size: 24px;
+		}
+	}
+    .game-area {
+        margin-left: 100px;
+        gap: 30px;
+    }
+	.box {
+        border-radius: 20px;
+        height: 150px;
+        width: 150px;
+	}
+	.round {
+        border-radius: 50%;
+		border: 40px solid $white;
+	}
+}

@@ -9,14 +9,19 @@
 
 body {
   height: 100vh;
-  background-color: #29539b;
-  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+  width: 100%;
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
   color: #e5e5e5;
   font-family: 'Genos', sans-serif;
   font-size: 36px;
 }
 
-.game-window {
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,14 +31,78 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 20px 0px;
+}
+
+.game-menu {
+  position: relative;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .game-name {
-  margin: 40px 0 40px;
+  position: relative;
+  font-size: 30px;
+}
+
+.game-name::before {
+  content: 'by Bartosz Bobrecki';
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 10px;
+  top: 40px;
+  font-weight: normal;
+}
+
+.game-info {
+  position: absolute;
+  top: 365px;
+  font-size: 25px;
+}
+
+.game-restart {
+  position: absolute;
+  top: 420px;
+  border-radius: 15px;
+  height: 30px;
+  width: 90px;
+  font-family: 'Genos', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .game-area {
@@ -46,49 +115,96 @@ body {
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  height: 500px;
-  width: 500px;
-  background-color: #e5e5e5;
-  border-radius: 30px;
 }
 
 .box {
-  background-color: #29539b;
+  height: 1.9em;
+  width: 1.9em;
+  opacity: 20%;
+  background-color: #e5e5e5;
   border: 26px transparent;
-  border-radius: 26px;
+  border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
 
-.round, .cross {
+.round,
+.cross {
+  opacity: 100%;
   cursor: default;
 }
 
 .round {
   background-color: transparent;
   border-radius: 50%;
-  border: 40px solid #29539b;
+  border: 20px solid #e5e5e5;
 }
 
 .cross {
-  background-color: #29539b;
+  background-color: #e5e5e5;
   -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
           clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 }
 
-.game-info {
-  font-size: 48px;
-  margin: 20px 0;
-}
-
-.game-restart {
-  border-radius: 25px;
-  height: 50px;
-  width: 150px;
-  font-family: 'Genos', sans-serif;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #29539b;
-  font-weight: bold;
-  cursor: pointer;
+@media (min-width: 1200px) {
+  .wrapper {
+    height: 100%;
+  }
+  .game {
+    padding: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .game-menu {
+    height: 500px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .game-name {
+    margin-bottom: 254px;
+    font-size: 70px;
+  }
+  .game-name::before {
+    font-size: 20px;
+    text-align: left;
+    top: 70px;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .game-info {
+    position: relative;
+    top: 0;
+    font-size: 48px;
+    margin: 20px 0;
+  }
+  .game-restart {
+    position: relative;
+    top: 0;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    font-size: 24px;
+  }
+  .game-area {
+    margin-left: 100px;
+    gap: 30px;
+  }
+  .box {
+    border-radius: 20px;
+    height: 150px;
+    width: 150px;
+  }
+  .round {
+    border-radius: 50%;
+    border: 40px solid #e5e5e5;
+  }
 }
 /*# sourceMappingURL=style.css.map */

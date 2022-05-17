@@ -8,21 +8,70 @@
 }
 body {
 	height: 100vh;
-    background-color: $app-background-color;
-    background-image: $app-background-gradient;
+	width: 100%;
+	background-color: $app-background-color;
+	background-image: $app-background-gradient;
 	color: $white;
 	font-family: 'Genos', sans-serif;
 	font-size: 36px;
 }
-.game-window {
-    display: flex;
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	height: 80%;
+	display: flex;
 	align-items: center;
 	justify-content: center;
-    flex-direction: column;
 }
-.game-name {
-    margin: 40px 0 40px;
+.game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 20px 0px;
+	&-menu {
+		position: relative;
+		height: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	&-name {
+		position: relative;
+		font-size: 30px;
+		&::before {
+			content: 'by Bartosz Bobrecki';
+			position: absolute;
+			text-align: center;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 10px;
+			top: 40px;
+			font-weight: normal;
+		}
+	}
+	&-info {
+		position: absolute;
+		top: 365px;
+		font-size: 25px;
+	}
+	&-restart {
+		position: absolute;
+		top: 420px;
+		border-radius: 15px;
+		height: 30px;
+		width: 90px;
+		font-family: 'Genos', sans-serif;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: rgb(42, 42, 42);
+		font-weight: bold;
+		cursor: pointer;
+	}
 }
+
 .game-area {
 	display: grid;
 	padding: 10px;
@@ -30,27 +79,29 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 10px;
-	height: 500px;
-	width: 500px;
-	background-color: $white;
-	border-radius: 30px;
 }
 .box {
-	background-color: $app-background-color;
+	height: 1.9em;
+	width: 1.9em;
+	opacity: 20%;
+	background-color: $white;
 	border: 26px transparent;
-	border-radius: 26px;
-    cursor: pointer;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: opacity .3s;
 }
-.round, .cross {
-    cursor: default;
+.round,
+.cross {
+	opacity: 100%;
+	cursor: default;
 }
 .round {
 	background-color: transparent;
 	border-radius: 50%;
-	border: 40px solid $app-background-color;;
+	border: 20px solid $white;
 }
 .cross {
-	background-color: $app-background-color;;
+	background-color: $white;
 	clip-path: polygon(
 		20% 0%,
 		0% 20%,
@@ -64,20 +115,6 @@ body {
 		100% 20%,
 		80% 0%,
 		50% 30%
-	);
-}
-.game-info {
-    font-size: 48px;
-	margin: 20px 0;
-}
-.game-restart {
-    border-radius: 25px;
-    height: 50px;
-    width: 150px;
-    font-family: 'Genos', sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: $app-background-color;
-    font-weight: bold;
-    cursor: pointer;
-}
+		);
+	}
+	@import './desktop';
