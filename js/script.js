@@ -9,7 +9,7 @@ const restartBtn = document.querySelector('.game-restart')
 // --------------------------------------------
 const setSymbols = e => {
 	//It checks that game areas are empty
-	if (!e.target.classList.contains('circle') && !e.target.classList.contains('cross')) {
+	if (!e.target.classList.contains(' e') && !e.target.classList.contains('cross')) {
 		turnChecker(e)
 		turnHandle()
 	}

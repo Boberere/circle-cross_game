@@ -60,9 +60,9 @@ body {
 	&-restart {
 		position: absolute;
 		top: 420px;
-		border-radius: 15px;
-		height: 30px;
-		width: 90px;
+		border-radius: 25px;
+		height: 50px;
+		width: 200px;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
 		text-transform: uppercase;
@@ -88,7 +88,7 @@ body {
 	border: 26px transparent;
 	border-radius: 10px;
 	cursor: pointer;
-	transition: opacity .3s;
+	transition: opacity 0.3s;
 }
 .circle,
 .cross {
@@ -115,6 +115,6 @@ body {
 		100% 20%,
 		80% 0%,
 		50% 30%
-		);
-	}
-	@import './desktop';
+	);
+}
+@import './desktop';
