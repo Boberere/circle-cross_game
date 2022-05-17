@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #29539b;
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+  color: #e5e5e5;
+  font-family: 'Genos', sans-serif;
+  font-size: 36px;
+}
+
+.game-window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-name {
+  margin: 100px 0 40px;
+}
+
+.game-area {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  overflow: hidden;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  height: 600px;
+  width: 600px;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+}
+
+.box {
+  background-color: #29539b;
+  border: 26px transparent;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.round, .cross {
+  cursor: default;
+}
+
+.round {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 50px solid #29539b;
+}
+
+.cross {
+  background-color: #29539b;
+  -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+          clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.game-info {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.game-restart {
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  font-family: 'Genos', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #29539b;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
