@@ -1,5 +1,6 @@
 ## Live link: 
-    https://boberere.github.io/circle-cross_game/
+    [https://boberere.github.io/circle-cross_game/]
+    
 
 ## Tech stack:
     HTML5
